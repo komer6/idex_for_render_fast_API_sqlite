@@ -35,7 +35,7 @@
 
         // Fetch all dogs from the API
         function fetchDogs() {
-            axios.get("http://127.0.0.1:8000/")
+            axios.get("https://fastapi-render-sqlite.onrender.com/")
                 .then(response => {
                     const dogs = response.data;
                     const dogList = document.getElementById("dogList");
@@ -61,7 +61,7 @@
                 color: document.getElementById("color").value,
             };
 
-            axios.post("http://127.0.0.1:8000/", newDog)
+            axios.post("https://fastapi-render-sqlite.onrender.com/", newDog)
                 .then(response => {
                     console.log("Dog added:", response.data);
                     fetchDogs(); // Refresh the dog list after adding
